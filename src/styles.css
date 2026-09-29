@@ -1,0 +1,21 @@
+:root { --ink: #1b2a41; --paper: #f6f4ee; --line: #dcd8cc; --accent: #d1495b; --gold: #f4b942; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; line-height: 1.5; }
+main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 1.6rem; margin: 0 0 16px; }
+nav { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid var(--line); }
+nav button { background: none; border: 0; padding: 8px 14px; font: inherit; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; color: var(--ink); }
+nav button[aria-selected='true'] { border-bottom-color: var(--accent); font-weight: 700; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin-bottom: 12px; }
+.controls label { display: flex; flex-direction: column; font-size: 0.85rem; gap: 2px; }
+select, button { font: inherit; padding: 6px 12px; border: 1px solid var(--ink); border-radius: 4px; background: #fff; color: var(--ink); }
+button { cursor: pointer; }
+button.primary { background: var(--ink); color: #fff; }
+button:disabled, select:disabled { opacity: 0.5; cursor: not-allowed; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+canvas.grid { width: 100%; height: auto; border: 2px solid var(--ink); background: #fff; cursor: crosshair; touch-action: none; }
+.bars { display: flex; align-items: flex-end; gap: 2px; height: 420px; border: 2px solid var(--ink); background: #fff; padding: 8px; }
+.bar { flex: 1; background: #7cc6d9; min-width: 2px; }
+.bar.hot { background: var(--accent); }
+.info { margin: 12px 0 4px; font-weight: 600; }
+.note { margin: 0; font-size: 0.85rem; opacity: 0.75; }
